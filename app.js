@@ -32,7 +32,7 @@ function ready(){
     }
 
     //Agregamos funcionalidad al boton Agregar al carrito
-    var botonesAgregarAlCarrito = document.getElementsByClassName('boton-item');
+    var botonesAgregarAlCarrito = document.querySelectorAll('#boton-item');
     for(var i=0; i<botonesAgregarAlCarrito.length;i++){
         var button = botonesAgregarAlCarrito[i];
         button.addEventListener('click', agregarAlCarritoClicked);
