@@ -77,7 +77,7 @@ function hacerVisibleCarrito(){
     items.style.width = '60%';
 }
 
-//Funciòn que agrega un item al carrito
+//Funciòn que agrega un item al carrito_______________________________________________crea el producto en el carrito_________|
 function agregarItemAlCarrito(titulo, precio, imagenSrc){
     var item = document.createElement('div');
     item.classList.add = ('item');
