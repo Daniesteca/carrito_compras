@@ -55,10 +55,12 @@ function pagarClicked(){
 //Funciòn que controla el boton clickeado de agregar al carrito
 function agregarAlCarritoClicked(event){
     var button = event.target;
-    var item = button.parentElement;
-    var titulo = item.getElementsByClassName('titulo-item')[0].innerText;
-    var precio = item.getElementsByClassName('precio-item')[0].innerText;
-    var imagenSrc = item.getElementsByClassName('img-item')[0].src;
+    var itemRow = button.closest('tr'); // Obtener la fila completa del producto
+
+    // Obtener elementos por ID dentro de la fila
+    var titulo = itemRow.querySelector("#titulo-item").innerText;
+    var precio = itemRow.querySelector("#precio-item").innerText;
+    var imagenSrc = itemRow.querySelector("#img-item").src;
     console.log(imagenSrc);
 
     agregarItemAlCarrito(titulo, precio, imagenSrc);
