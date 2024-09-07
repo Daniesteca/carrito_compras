@@ -19,11 +19,48 @@
     <section id="contenedor" class=" contenedor">
         <!-- Contenedor de productos -->
         <div id="contenedor-items">
-            <table  id="contenedor-items-table" class="table table table-bordered table-striped align-middle text-center">
+
+            <title>Servicios</title>
+
+            <table id="contenedor-items-table-1" class="table table table-bordered table-striped align-middle text-center">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col">Item</th>
+                        <th scope="col">imagen de referencia</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Seleccionar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="titulo-item " id="titulo-item"><span>Box Engasse</span></td>
+                        <td><img src="img/boxengasse.png" id="img-item" class="img-fluid mx-auto" style="width: 85px; height: 85px;" alt="logo"></td>
+                        <td class="precio-item" id="precio-item"><span >$15.000</span></td>
+                        <td  id="boton-item"><button class="btn btn-dark" >Agregar al Carrito</button></td>
+                    </tr>
+                    <tr>
+                        <td><span class="titulo-item" id="titulo-item">English Horse</span></td>
+                        <td><img src="img/englishrose.png" id="img-item" class="img-fluid mx-auto mt-4" style="width: 85px; height: 85px;" alt="logo"></td>
+                        <td><span class="precio-item" id="precio-item">$25.000</span></td>
+                        <td> <button class="btn btn-dark" id="boton-item">Agregar al Carrito</button></td>
+                    </tr>
+                    <tr>
+                        <td><span class="titulo-item" id="titulo-item">Knock Nap</span></td>
+                        <td><img src="img/knocknap.png" id="img-item" class="img-fluid mx-auto mt-4" style="width: 85px; height: 85px;" alt="logo"></td>
+                        <td> <span class="precio-item" id="precio-item">$35.000</span></td>
+                        <td> <button class="btn btn-dark" id="boton-item">Agregar al Carrito</button></td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+            <title>Productos</title>
+
+            <table  id="contenedor-items-table-2" class="table table table-bordered table-striped align-middle text-center">
                 <thead class="table-dark"> <!--color encabezado de la  tabla -->
                     <tr >
                         <th scope="col">Item</th>
-                        <th scope="col">imagen ref</th>
+                        <th scope="col">imagen de referencia</th>
                         <th scope="col">Precio</th>
                         <th scope="col">Seleccionar</th>
                     </tr>
@@ -86,6 +123,12 @@
                     </tr>
                 </tbody>
             </table>
+
+
+
+
+
+
         </div>
 
         <!-- Carrito de Compras -->
@@ -148,7 +191,8 @@
     <script src="https://cdn.datatables.net/2.1.5/js/dataTables.bootstrap5.js"></script>
     <script>
         	
-    new DataTable('#contenedor-items-table');
+    new DataTable('#contenedor-items-table-1');
+    new DataTable('#contenedor-items-table-2');
     </script>
     
 
