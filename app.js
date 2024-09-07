@@ -45,7 +45,8 @@ function ready(){
 function pagarClicked(){
     alert("Gracias por la compra");
     //Elimino todos los elmentos del carrito
-    var carritoItems = document.getElementsByClassName('carrito-items')[0];
+    // var carritoItems = document.getElementsByClassName('carrito-items')[0];
+    var carritoItems = document.querySelectorAll('#carrito-items')[0];;
     while (carritoItems.hasChildNodes()){
         carritoItems.removeChild(carritoItems.firstChild)
     }
@@ -71,11 +72,14 @@ function agregarAlCarritoClicked(event){
 //Funcion que hace visible el carrito
 function hacerVisibleCarrito(){
     carritoVisible = true;
-    var carrito = document.getElementsByClassName('carrito')[0];
+    // var carrito = document.getElementsByClassName('carrito')[0];
+    var carrito = document.querySelectorAll('#carrito')[0];
     carrito.style.marginRight = '0';
+    carrito.style.marginLeft = '3';
     carrito.style.opacity = '1';
 
-    var items =document.getElementsByClassName('contenedor-items')[0];
+    // var items =document.getElementsByClassName('contenedor-items')[0];
+    var items =document.querySelectorAll('#contenedor-items')[0];
     items.style.width = '60%';
 }
 
@@ -83,7 +87,8 @@ function hacerVisibleCarrito(){
 function agregarItemAlCarrito(titulo, precio, imagenSrc){
     var item = document.createElement('div');
     item.classList.add = ('item');
-    var itemsCarrito = document.getElementsByClassName('carrito-items')[0];
+    // var itemsCarrito = document.getElementsByClassName('carrito-items')[0];
+    var itemsCarrito = document.querySelectorAll('#carrito-items')[0];;
 
     //controlamos que el item que intenta ingresar no se encuentre en el carrito
     var nombresItemsCarrito = itemsCarrito.getElementsByClassName('carrito-item-titulo');
@@ -164,21 +169,25 @@ function eliminarItemCarrito(event){
 }
 //Funciòn que controla si hay elementos en el carrito. Si no hay oculto el carrito.
 function ocultarCarrito(){
-    var carritoItems = document.getElementsByClassName('carrito-items')[0];
+    // var carritoItems = document.getElementsByClassName('carrito-items')[0];
+    var carritoItems = document.querySelectorAll('#carrito-items')[0];
     if(carritoItems.childElementCount==0){
-        var carrito = document.getElementsByClassName('carrito')[0];
+        // var carrito = document.getElementsByClassName('carrito')[0];
+        var carrito = document.querySelectorAll('#carrito')[0];
         carrito.style.marginRight = '-100%';
         carrito.style.opacity = '0';
         carritoVisible = false;
     
-        var items =document.getElementsByClassName('contenedor-items')[0];
+        // var items =document.getElementsByClassName('contenedor-items')[0];
+        var items =document.querySelectorAll('#contenedor-items')[0];
         items.style.width = '100%';
     }
 }
 //Actualizamos el total de Carrito
 function actualizarTotalCarrito(){
     //seleccionamos el contenedor carrito
-    var carritoContenedor = document.getElementsByClassName('carrito')[0];
+    // var carritoContenedor = document.getElementsByClassName('carrito')[0];
+    var carritoContenedor = document.querySelectorAll('#carrito')[0];
     var carritoItems = carritoContenedor.getElementsByClassName('carrito-item');
     var total = 0;
     //recorremos cada elemento del carrito para actualizar el total
